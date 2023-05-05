@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --font: 'Red Hat Display', sans-serif;
+    --bg-color: hsl(225, 100%, 94%);
+    --header-color: hsl(223, 47%, 23%);
+    --text-color: hsl(224, 23%, 55%);
+    --button-color: hsl(245, 75%, 52%);
+    --button-hover: hsl(245, 75%, 52%, 0.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    height: 100vh;
+    font-family: var(--font);
+}
+
+.background {
+    position: absolute;
+    z-index: -999;
+}
+
+.container {
+    width: 450px;
+    height: 700px;
+    background-color: white;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    height: 220px;
+}
+
+.container h1 {
+    font-weight: 900;
+    color: var(--header-color);
+    font-size: 1.75rem;
+    margin: 50px 0 20px 0;
+}
+
+.container p {
+    margin-inline: 50px;
+    color: var(--text-color);
+    line-height: 25px;
+}
+
+.package {
+    width: 75%;
+    height: 100px;
+    background-color: hsl(225, 100%, 98%);
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding-block: 25px;
+    padding-inline: 20px;
+}
+
+.package div {
+    height: 100%;
+    width: 100px;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.package div h1 {
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 2.5px;
+}
+
+.package div p {
+    margin: 0;
+}
+
+.container button {
+    width: 75%;
+    height: 50px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-block: 25px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.container button:hover {
+    background-color: var(--button-hover);
+}
+
+.container a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.container a:hover {
+    color: black;
+}
+
+.package a {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--button-color);
+    font-weight: 700;
+    margin-top: 15px;
+    margin-left: 75px;
+    transition: all 0.25s ease;
+}
+
+.package a:hover {
+    text-decoration: none;
+    color: var(--button-hover);
+}
+
+@media screen and (max-width: 380px) {
+    .background {
+        display: none;
+    }
+
+    .container {
+        width: 340px;
+    }
+
+    .container p {
+        margin-inline: 35px;
+    }
+
+    .package {
+        width: 90%;
+    }
+
+    .package div {
+        width: 100px;
+    }
+
+    .package a {
+        margin-left: 50px;
+    }
+}
